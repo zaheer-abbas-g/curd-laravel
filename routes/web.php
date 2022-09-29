@@ -14,8 +14,9 @@ use App\Http\Controllers\customcontroller ;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('form.create');
 });
+
 
 Route::get('/create',[customcontroller::class,'create']);
 Route::post('/store',[customcontroller::class,'store']);
