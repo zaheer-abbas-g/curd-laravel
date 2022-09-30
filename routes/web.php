@@ -14,13 +14,15 @@ use App\Http\Controllers\customcontroller ;
 */
 
 Route::get('/', function () {
-    return view('form.create');
+    return view('welcome');
 });
 
 
 Route::get('/create',[customcontroller::class,'create']);
 Route::post('/store',[customcontroller::class,'store']);
-Route::get('/viewdata',[customcontroller::class,'viewdata']);
+Route::get('/viewdata',[customcontroller::class,'viewdata'])->middleware('auth');
 Route::get('delete/{id?}',[customcontroller::class,'delete']);
-Route::get('edit/{id?}',[customcontroller::class,'edit']);
+Route::get('edit/{id?}',[customcontroller::class,'edit'])->middleware('auth');
 Route::post('update/{id?}',[customcontroller::class,'update']);
+Auth::routes();
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

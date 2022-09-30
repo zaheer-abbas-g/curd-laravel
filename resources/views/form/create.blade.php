@@ -33,7 +33,7 @@ button:hover {
 /* Extra styles for the cancel button */
 .cancelbtn {
   width: auto;
-  padding: 10px 18px;
+ 
   background-color: #f44336;
 }
 
@@ -172,10 +172,12 @@ span.psw {
       <br />
       <label for="upload">Upload</label>
       <input type="file" name="photo">
-    </div>
+     </div>
 
     <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <button type="button"  onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <button type="submit" style="width:20%">submit</button>
+    
     </div>
    
   </form> 

@@ -33,7 +33,7 @@ button:hover {
 /* Extra styles for the cancel button */
 .cancelbtn {
   width: auto;
-  padding: 10px 18px;
+
   background-color: #f44336;
 }
 
@@ -170,15 +170,11 @@ span.psw {
       <br />
       <label for="upload">Upload</label>
       <input type="file" name="photo" value="{{$people->image}}" >
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
+      <button type="submit" style="width:20%">Update</button>
     </div>
    
   </form> 
